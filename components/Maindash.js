@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { useAuth } from "../hooks";
 import BalanceGraph from "./BalanceGraph";
+import Transactions from "./Transactions";
 
 export default function Maindash({ props }) {
 	const { user, setUser } = useAuth();
@@ -37,6 +38,7 @@ export default function Maindash({ props }) {
 				</Flex>
 			</Heading>
 			<BalanceGraph />
+			<Transactions />
 		</Flex>
 	);
 }
