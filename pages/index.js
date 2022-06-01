@@ -5,6 +5,7 @@ import { useAuth } from "../hooks";
 import Sidebar from "../components/Sidebar";
 import Maindash from "../components/Maindash";
 import { useColorMode } from "@chakra-ui/react";
+import CardSection from "../components/CardSection";
 
 export default function Home() {
 	const { user, setUser } = useAuth();
@@ -25,7 +26,7 @@ export default function Home() {
 				<Sidebar user={user} />
 				{/* Center */}
 				<Maindash user={user} />
-				<Flex></Flex>
+				<CardSection />
 			</Flex>
 		</ProtectedPage>
 	);
