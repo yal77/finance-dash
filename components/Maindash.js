@@ -20,7 +20,7 @@ import Transactions from "./Transactions";
 export default function Maindash({ user }) {
 	return (
 		<Flex
-			w="55%"
+			w={["100%", "100%", "60%", "60%", "55%"]}
 			p="3%"
 			overflow="auto"
 			minHeight="100vh"

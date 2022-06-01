@@ -36,7 +36,7 @@ export default function Register() {
 		const msgString = JSON.stringify(msgBody);
 		console.log(msgString);
 		console.log(msgBody);
-		const res = await fetch("http://localhost:5000/register", {
+		const res = await fetch("http://192.168.70.3:5000/register", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: msgString,

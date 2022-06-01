@@ -35,49 +35,51 @@ export default function Transactions({ user }) {
 				<Heading fontSize="3xl">Transactions</Heading>
 				<Text>May, 2022</Text>
 			</Flex>
-			<Table variant="unstyled">
-				<Thead color="gray">
-					<Th>Transaction Name</Th>
-					<Th>Category</Th>
-					<Th isNumeric>Cashback</Th>
-					<Th isNumeric>Amount</Th>
-				</Thead>
-				<Tbody>
-					<TransactionRow
-						name="Amazon"
-						date="May 25, 2022 at 4:50pm"
-						category="Shopping"
-						cashback="+$5"
-						amount="-$50"
-						src="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg"
-					/>
-					<TransactionRow
-						name="Deliveroo"
-						date="May 21, 2022 at 2:20pm"
-						category="Food and Drink"
-						cashback="+$2"
-						amount="-$24"
-						src="https://www.apkmirror.com/wp-content/uploads/2019/04/5cadfa39553b3.png"
-					/>
-					<TransactionRow
-						name="Netflix"
-						date="May 18, 2022 at 8:50pm"
-						category="Entertainment"
-						cashback="+$2"
-						amount="-$20"
-						avatarColor="#000"
-						src="https://cdn.vox-cdn.com/thumbor/Yq1Vd39jCBGpTUKHUhEx5FfxvmM=/39x0:3111x2048/1200x800/filters:focal(39x0:3111x2048)/cdn.vox-cdn.com/uploads/chorus_image/image/49901753/netflixlogo.0.0.png"
-					/>
-					<TransactionRow
-						name="Deliveroo"
-						date="May 15, 2022 at 2:20pm"
-						category="Food and Drink"
-						cashback="+$2"
-						amount="-$24"
-						src="https://www.apkmirror.com/wp-content/uploads/2019/04/5cadfa39553b3.png"
-					/>
-				</Tbody>
-			</Table>
+			<Flex overflow="auto">
+				<Table variant="unstyled" width="100%">
+					<Thead color="gray">
+						<Th>Transaction Name</Th>
+						<Th>Category</Th>
+						<Th isNumeric>Cashback</Th>
+						<Th isNumeric>Amount</Th>
+					</Thead>
+					<Tbody>
+						<TransactionRow
+							name="Amazon"
+							date="May 25, 2022 at 4:50pm"
+							category="Shopping"
+							cashback="+$5"
+							amount="-$50"
+							src="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg"
+						/>
+						<TransactionRow
+							name="Deliveroo"
+							date="May 21, 2022 at 2:20pm"
+							category="Food and Drink"
+							cashback="+$2"
+							amount="-$24"
+							src="https://www.apkmirror.com/wp-content/uploads/2019/04/5cadfa39553b3.png"
+						/>
+						<TransactionRow
+							name="Netflix"
+							date="May 18, 2022 at 8:50pm"
+							category="Entertainment"
+							cashback="+$2"
+							amount="-$20"
+							avatarColor="#000"
+							src="https://cdn.vox-cdn.com/thumbor/Yq1Vd39jCBGpTUKHUhEx5FfxvmM=/39x0:3111x2048/1200x800/filters:focal(39x0:3111x2048)/cdn.vox-cdn.com/uploads/chorus_image/image/49901753/netflixlogo.0.0.png"
+						/>
+						<TransactionRow
+							name="Deliveroo"
+							date="May 15, 2022 at 2:20pm"
+							category="Food and Drink"
+							cashback="+$2"
+							amount="-$24"
+							src="https://www.apkmirror.com/wp-content/uploads/2019/04/5cadfa39553b3.png"
+						/>
+					</Tbody>
+				</Table>
+			</Flex>
 		</Flex>
 	);
 }

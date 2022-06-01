@@ -41,7 +41,7 @@ export default function ProtectedPage({ children }) {
 			email: email,
 			password: password,
 		};
-		const res = await fetch("http://localhost:5000/login", {
+		const res = await fetch("http://192.168.70.3:5000/login", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(msgBody),

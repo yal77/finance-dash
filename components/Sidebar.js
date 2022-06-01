@@ -11,6 +11,7 @@ import {
 	Input,
 	Stack,
 	Text,
+	Icon,
 	Wrap,
 } from "@chakra-ui/react";
 import { AiOutlineHome, AiOutlinePieChart } from "react-icons/ai";
@@ -26,17 +27,17 @@ export default function Sidebar(props) {
 	return (
 		<Flex
 			bg={bgColor}
-			w="10%"
+			w={["100%", "100%", "15%", "15%", "10%"]}
 			flexDir="column"
 			alignItems="center"
-			gap="50px"
+			gap={["50px", "50px"]}
 			justifyContent="space-between"
 			borderRightRadius="0.5rem"
 			minW="200px"
 		>
 			<Flex justify="space-between" flexDir="column">
 				<Heading
-					mb="100"
+					mb={["10", "10", "100"]}
 					mt="10"
 					py="2"
 					bgGradient="linear(to-l, #D7EBEB, #F4AFE9)"
@@ -46,13 +47,28 @@ export default function Sidebar(props) {
 				>
 					Stonks.io
 				</Heading>
-				<Flex flexDir="column" gap="1rem" align="center">
-					<Flex flexDir="column" align="flex-start" gap="0.5rem">
+				<Flex flexDir="column" gap="1rem" align="center" mb="50">
+					<Flex
+						flexDir={["row", "row", "column"]}
+						align="flex-start"
+						gap="0.5rem"
+					>
 						<Button
 							colorScheme="teal"
 							variant="link"
 							fontSize="xl"
-							leftIcon={<AiOutlineHome />}
+							leftIcon={
+								<Icon
+									as={AiOutlineHome}
+									display={[
+										"none",
+										"none",
+										"flex",
+										"flex",
+										"flex",
+									]}
+								/>
+							}
 							py="0.5rem"
 							px="0.5rem"
 						>
@@ -62,7 +78,18 @@ export default function Sidebar(props) {
 							colorScheme="teal"
 							variant="link"
 							fontSize="xl"
-							leftIcon={<AiOutlinePieChart />}
+							leftIcon={
+								<Icon
+									as={AiOutlinePieChart}
+									display={[
+										"none",
+										"none",
+										"flex",
+										"flex",
+										"flex",
+									]}
+								/>
+							}
 							py="0.5rem"
 							px="0.5rem"
 						>
@@ -72,7 +99,18 @@ export default function Sidebar(props) {
 							colorScheme="teal"
 							variant="link"
 							fontSize="xl"
-							leftIcon={<BiWalletAlt />}
+							leftIcon={
+								<Icon
+									as={BiWalletAlt}
+									display={[
+										"none",
+										"none",
+										"flex",
+										"flex",
+										"flex",
+									]}
+								/>
+							}
 							py="0.5rem"
 							px="0.5rem"
 						>
@@ -82,7 +120,18 @@ export default function Sidebar(props) {
 							colorScheme="teal"
 							variant="link"
 							fontSize="xl"
-							leftIcon={<BsGrid />}
+							leftIcon={
+								<Icon
+									as={BsGrid}
+									display={[
+										"none",
+										"none",
+										"flex",
+										"flex",
+										"flex",
+									]}
+								/>
+							}
 							py="0.5rem"
 							px="0.5rem"
 						>
@@ -92,7 +141,13 @@ export default function Sidebar(props) {
 				</Flex>
 			</Flex>
 
-			<Flex flexDir="row" align="center" my="30" gap={3}>
+			<Flex
+				flexDir="row"
+				align="center"
+				my="30"
+				gap={3}
+				display={["none", "none", "flex", "flex", "flex"]}
+			>
 				<Avatar
 					name={props.user.firstName}
 					src="https://bit.ly/dan-abramov"

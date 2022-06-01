@@ -21,7 +21,12 @@ export default function Home() {
 			>
 				{colorMode === "light" ? <MoonIcon /> : <SunIcon />}
 			</IconButton>
-			<Flex h="100vh" overflow="hidden" flexDir="row" w="100%">
+			<Flex
+				h={[null, null, "100vh"]}
+				overflow="hidden"
+				flexDir={["column", "column", "row"]}
+				w="100%"
+			>
 				{/* Left Side */}
 				<Sidebar user={user} />
 				{/* Center */}
