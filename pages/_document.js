@@ -15,11 +15,15 @@ export default class Document extends NextDocument {
 					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
-						href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+						href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap"
+						rel="stylesheet"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>
-				<body style={{ fontFamily: "'Roboto', sans serif" }}>
+				<body style={{ fontFamily: "'Cairo', sans serif" }}>
 					{/* 👇 Here's the script */}
 					<ColorModeScript
 						initialColorMode={theme.config.initialColorMode}

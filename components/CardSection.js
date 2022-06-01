@@ -1,5 +1,6 @@
-import { SearchIcon } from "@chakra-ui/icons";
+import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 import {
+	AvatarGroup,
 	Box,
 	Button,
 	Flex,
@@ -9,9 +10,10 @@ import {
 	InputGroup,
 	InputLeftElement,
 	Text,
+	Avatar,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { FiBell } from "react-icons/fi";
+import { FiBell, FiCreditCard, FiDollarSign } from "react-icons/fi";
 import { useColorModeValue } from "@chakra-ui/react";
 
 export default function CardSection() {
@@ -50,7 +52,7 @@ export default function CardSection() {
 				>
 					<Text>Current Balance</Text>
 					<Text fontSize="2xl" fontWeight="bold">
-						$5,300.00
+						$3,300.00
 					</Text>
 					<Text>**** **** **** 1549</Text>
 					<Flex dir="row" gap="1rem">
@@ -77,7 +79,7 @@ export default function CardSection() {
 				>
 					<Text>Current Balance</Text>
 					<Text fontSize="2xl" fontWeight="bold">
-						$5,300.00
+						$40.00
 					</Text>
 					<Text>**** **** **** 1549</Text>
 					<Flex dir="row" gap="1rem">
@@ -103,7 +105,7 @@ export default function CardSection() {
 				>
 					<Text color="white">Current Balance</Text>
 					<Text fontSize="2xl" fontWeight="bold" color="white">
-						$5,300.00
+						$350.00
 					</Text>
 					<Text color="white">**** **** **** 1549</Text>
 					<Flex dir="row" gap="1rem" color="white">
@@ -144,6 +146,53 @@ export default function CardSection() {
 					border="1px"
 				/>
 			</Flex>
+			<Flex flexDir="column" justify="center" w="80%">
+				<Flex flexDir="row" justify="space-between" align="center">
+					<Text>Balance</Text>
+					<Text fontSize="xl" fontWeight="bold">
+						$5,300.00
+					</Text>
+				</Flex>
+				<Flex flexDir="row" justify="space-between" align="center">
+					<Text>Credit Limit</Text>
+					<Text fontSize="xl" fontWeight="bold">
+						$6,000.00
+					</Text>
+				</Flex>
+			</Flex>
+			<Heading w="80%" fontSize="2xl">
+				Send money to
+			</Heading>
+			<Flex flexDir="row" gap="1rem" w="80%">
+				<AvatarGroup max={3} display="flex">
+					<Avatar />
+					<Avatar />
+					<Avatar />
+					<Avatar />
+				</AvatarGroup>
+				<Avatar cursor="pointer" icon={<AddIcon color="white" />} />
+			</Flex>
+
+			<Flex flexDir="column" gap="1rem" w="80%" mt={30}>
+				<Text>Card Number</Text>
+				<InputGroup>
+					<InputLeftElement>
+						<FiCreditCard />
+					</InputLeftElement>
+					<Input placeholder="xxxx xxxx xxxx xxxx" size="md" />
+				</InputGroup>
+
+				<Text>Sum</Text>
+				<InputGroup>
+					<InputLeftElement>
+						<FiDollarSign />
+					</InputLeftElement>
+					<Input placeholder="150.00" size="md" />/
+				</InputGroup>
+			</Flex>
+			<Button w="80%" p="1.5rem" colorScheme="teal">
+				Send Money
+			</Button>
 		</Flex>
 	);
 }

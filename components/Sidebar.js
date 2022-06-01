@@ -44,8 +44,10 @@ export default function Sidebar(props) {
 					bgClip="text"
 					fontSize="4xl"
 					userSelect="none"
+					fontWeight="700"
+					//fontFamily="'Nunito', sans-serif"
 				>
-					Stonks.io
+					stonks.io
 				</Heading>
 				<Flex flexDir="column" gap="1rem" align="center" mb="50">
 					<Flex
