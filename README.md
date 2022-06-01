@@ -1,6 +1,7 @@
 ### This is a banking/finance dashboard built using NextJS and ChakraUI
 
-![dark preview](https://github.com/yal77/finance/blob/[branch]/image.jpg?raw=true)
+![dark preview](/stonksio%20preview.png)
+![light preview](/stonkio%20light.png)
 
 ## Getting Started
 
