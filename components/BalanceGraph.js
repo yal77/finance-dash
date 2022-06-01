@@ -23,7 +23,7 @@ export default function BalanceGraph() {
 				<Text fontSize="lg">
 					My Balance:{" "}
 					<Flex fontWeight="bold" display="inline-flex">
-						5000
+						5300
 					</Flex>
 				</Text>
 			</Flex>
