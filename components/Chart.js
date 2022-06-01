@@ -75,7 +75,10 @@ export default function Chart() {
 				pointRadius: 1,
 				pointHitRadius: 10,
 				color: "#fff",
-				data: user.monthlyBalances,
+				data: [
+					1000, 1400, 3000, 2400, 3400, 4000, 4300, 3900, 4500, 3000,
+					4500, 5000,
+				],
 			},
 		],
 	};
