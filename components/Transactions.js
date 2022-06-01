@@ -17,8 +17,7 @@ import Chart from "./Chart";
 import { useColorModeValue } from "@chakra-ui/react";
 import TransactionRow from "./TransactionRow";
 
-export default function Transactions() {
-	const { user, setUser } = useAuth();
+export default function Transactions({ user }) {
 	const bgColor = useColorModeValue("gray.50", "gray.900");
 
 	return (

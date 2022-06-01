@@ -11,24 +11,37 @@ import {
 	Stack,
 	Text,
 	Wrap,
+	IconButton,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRef, useState } from "react";
 import ProtectedPage from "../components/ProtectedPage";
 import { useAuth } from "../hooks";
 import Sidebar from "../components/Sidebar";
 import Maindash from "../components/Maindash";
 import { useEffect } from "react";
+import { useColorMode } from "@chakra-ui/react";
 
 export default function Home() {
 	const { user, setUser } = useAuth();
+	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<ProtectedPage>
+			<IconButton
+				aria-label="Toggle Mode"
+				onClick={toggleColorMode}
+				position="absolute"
+				top="3"
+				right="3"
+			>
+				{colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+			</IconButton>
 			<Flex h="100vh" overflow="hidden" flexDir="row" w="100%">
 				{/* Left Side */}
 				<Sidebar user={user} />
 				{/* Center */}
-				<Maindash />
+				<Maindash user={user} />
 				<Flex></Flex>
 			</Flex>
 		</ProtectedPage>

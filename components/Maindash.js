@@ -17,9 +17,7 @@ import { useAuth } from "../hooks";
 import BalanceGraph from "./BalanceGraph";
 import Transactions from "./Transactions";
 
-export default function Maindash({ props }) {
-	const { user, setUser } = useAuth();
-
+export default function Maindash({ user }) {
 	return (
 		<Flex
 			w="55%"
@@ -38,7 +36,7 @@ export default function Maindash({ props }) {
 				</Flex>
 			</Heading>
 			<BalanceGraph />
-			<Transactions />
+			<Transactions user={user} />
 		</Flex>
 	);
 }

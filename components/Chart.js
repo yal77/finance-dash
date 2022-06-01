@@ -25,7 +25,6 @@ ChartJS.register(
 );
 
 export default function Chart() {
-	const { user, setUser } = useAuth();
 	const lineColor = useColorModeValue("#000", "#fff");
 	const gridColor = useColorModeValue(
 		"rgba(0,0,0,0.5)",
@@ -35,10 +34,6 @@ export default function Chart() {
 		"rgba(0,0,0,0.1)",
 		"rgba(255,255,255,0.1)"
 	);
-
-	useEffect(() => {
-		console.log(user.monthlyBalances);
-	}, [user.monthlyBalances]);
 
 	const data = {
 		labels: [

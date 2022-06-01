@@ -21,7 +21,6 @@ import { useEffect } from "react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 export default function Sidebar(props) {
-	const { colorMode, toggleColorMode } = useColorMode();
 	const bgColor = useColorModeValue("#1f1f1f", "#000");
 	const textColor = useColorModeValue("#fff", "gray.100");
 	return (
@@ -107,9 +106,6 @@ export default function Sidebar(props) {
 					{props.user.firstName + " " + props.user.lastName}
 				</Text>
 			</Flex>
-			<Button onClick={toggleColorMode}>
-				Toggle {colorMode === "light" ? "Dark" : "Light"}
-			</Button>
 		</Flex>
 	);
 }

@@ -6,12 +6,11 @@ import Chart from "./Chart";
 import { useColorModeValue } from "@chakra-ui/react";
 
 export default function BalanceGraph() {
-	const { user, setUser } = useAuth();
 	const bgColor = useColorModeValue("gray.50", "gray.900");
 
 	return (
 		<Flex
-			w="80%"
+			w="90%"
 			bgColor={bgColor}
 			borderRadius="0.5rem"
 			boxShadow="md"
