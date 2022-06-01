@@ -1,26 +1,9 @@
-import {
-	Avatar,
-	Box,
-	Button,
-	Center,
-	Flex,
-	FormControl,
-	FormLabel,
-	Heading,
-	Input,
-	Stack,
-	Text,
-	Wrap,
-	IconButton,
-} from "@chakra-ui/react";
-import Link from "next/link";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { useRef, useState } from "react";
 import ProtectedPage from "../components/ProtectedPage";
 import { useAuth } from "../hooks";
 import Sidebar from "../components/Sidebar";
 import Maindash from "../components/Maindash";
-import { useEffect } from "react";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Home() {

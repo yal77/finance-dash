@@ -47,7 +47,7 @@ export default function Sidebar(props) {
 					Stonks.io
 				</Heading>
 				<Flex flexDir="column" gap="1rem" align="center">
-					<Flex flexDir="column" align="flex-start">
+					<Flex flexDir="column" align="flex-start" gap="0.5rem">
 						<Button
 							colorScheme="teal"
 							variant="link"

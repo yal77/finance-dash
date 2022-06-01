@@ -8,12 +8,17 @@ export default function TransactionRow({
 	amount,
 	src,
 	date,
+	avatarColor,
 }) {
 	return (
 		<Tr>
 			<Td>
 				<Flex flexDir="row" gap="10px" align="center">
-					<Avatar name={name} src={src} bg="white" />
+					<Avatar
+						name={name}
+						src={src}
+						bg={avatarColor == null ? "#fff" : avatarColor}
+					/>
 					<Flex flexDir="column">
 						<Text fontWeight="bold">{name}</Text>
 						<Text fontSize="xs">{date}</Text>
