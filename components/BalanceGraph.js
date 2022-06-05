@@ -6,7 +6,7 @@ import Chart from "./Chart";
 import { useColorModeValue } from "@chakra-ui/react";
 
 export default function BalanceGraph() {
-	const bgColor = useColorModeValue("gray.50", "gray.900");
+	const bgColor = useColorModeValue("gray.100", "gray.900");
 
 	return (
 		<Flex

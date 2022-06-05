@@ -52,7 +52,7 @@ export default function TransactionRow({
 			</Td>
 			<Modal isOpen={isOpen} onClose={onClose} isCentered>
 				<ModalOverlay />
-				<ModalContent p="1rem">
+				<ModalContent p="1rem" borderRadius="0.5rem">
 					<ModalHeader display="flex" alignItems="center">
 						<Avatar
 							name={name}

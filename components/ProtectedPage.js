@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useAuth } from "../hooks";
+import { useRouter } from "next/router";
 
 export default function ProtectedPage({ children }) {
 	const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ export default function ProtectedPage({ children }) {
 	const { user, setUser } = useAuth("");
 	const { balance, setBalance } = useAuth("");
 	const loggedIn = token;
+	const router = useRouter();
 
 	const getName = () => {
 		if (firstName && lastName) {
@@ -53,6 +55,8 @@ export default function ProtectedPage({ children }) {
 		setUser(data.user);
 		if (typeof data.accessToken == "undefined") {
 			alert("Invalid Credentials");
+		} else if (typeof data.accessToken == "string") {
+			router.push("/");
 		}
 	}
 	return (
@@ -129,7 +133,7 @@ export default function ProtectedPage({ children }) {
 									>
 										Access Dashboard
 									</Button>
-									<Link href="/Register">
+									<Link href="/register">
 										<Button
 											colorScheme="teal"
 											marginTop="1.5rem"
