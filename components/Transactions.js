@@ -42,6 +42,7 @@ export default function Transactions({ user }) {
 						<Th>Category</Th>
 						<Th isNumeric>Cashback</Th>
 						<Th isNumeric>Amount</Th>
+						<Th>Details</Th>
 					</Thead>
 					<Tbody>
 						<TransactionRow
