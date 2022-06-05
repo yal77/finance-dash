@@ -20,10 +20,13 @@ import { BsGrid } from "react-icons/bs";
 import { getUser } from "./ProtectedPage";
 import { useEffect } from "react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Sidebar(props) {
+export default function Sidebar({ user }) {
 	const bgColor = useColorModeValue("#1f1f1f", "#000");
 	const textColor = useColorModeValue("#fff", "gray.100");
+	const router = useRouter();
 	return (
 		<Flex
 			bg={bgColor}
@@ -55,90 +58,112 @@ export default function Sidebar(props) {
 						align="flex-start"
 						gap="0.5rem"
 					>
-						<Button
-							colorScheme="teal"
-							variant="link"
-							fontSize="xl"
-							leftIcon={
-								<Icon
-									as={AiOutlineHome}
-									display={[
-										"none",
-										"none",
-										"flex",
-										"flex",
-										"flex",
-									]}
-								/>
-							}
-							py="0.5rem"
-							px="0.5rem"
-						>
-							Home
-						</Button>
-						<Button
-							colorScheme="teal"
-							variant="link"
-							fontSize="xl"
-							leftIcon={
-								<Icon
-									as={AiOutlinePieChart}
-									display={[
-										"none",
-										"none",
-										"flex",
-										"flex",
-										"flex",
-									]}
-								/>
-							}
-							py="0.5rem"
-							px="0.5rem"
-						>
-							Credit
-						</Button>
-						<Button
-							colorScheme="teal"
-							variant="link"
-							fontSize="xl"
-							leftIcon={
-								<Icon
-									as={BiWalletAlt}
-									display={[
-										"none",
-										"none",
-										"flex",
-										"flex",
-										"flex",
-									]}
-								/>
-							}
-							py="0.5rem"
-							px="0.5rem"
-						>
-							Wallet
-						</Button>
-						<Button
-							colorScheme="teal"
-							variant="link"
-							fontSize="xl"
-							leftIcon={
-								<Icon
-									as={BsGrid}
-									display={[
-										"none",
-										"none",
-										"flex",
-										"flex",
-										"flex",
-									]}
-								/>
-							}
-							py="0.5rem"
-							px="0.5rem"
-						>
-							Services
-						</Button>
+						<Link href="/">
+							<Button
+								colorScheme={
+									router.pathname == "/" ? "red" : "teal"
+								}
+								variant="link"
+								fontSize="xl"
+								leftIcon={
+									<Icon
+										as={AiOutlineHome}
+										display={[
+											"none",
+											"none",
+											"flex",
+											"flex",
+											"flex",
+										]}
+									/>
+								}
+								py="0.5rem"
+								px="0.5rem"
+							>
+								Home
+							</Button>
+						</Link>
+						<Link href="/credit">
+							<Button
+								colorScheme={
+									router.pathname == "/credit"
+										? "red"
+										: "teal"
+								}
+								variant="link"
+								fontSize="xl"
+								leftIcon={
+									<Icon
+										as={AiOutlinePieChart}
+										display={[
+											"none",
+											"none",
+											"flex",
+											"flex",
+											"flex",
+										]}
+									/>
+								}
+								py="0.5rem"
+								px="0.5rem"
+							>
+								Credit
+							</Button>
+						</Link>
+						<Link href="wallet">
+							<Button
+								colorScheme={
+									router.pathname == "/wallet"
+										? "red"
+										: "teal"
+								}
+								variant="link"
+								fontSize="xl"
+								leftIcon={
+									<Icon
+										as={BiWalletAlt}
+										display={[
+											"none",
+											"none",
+											"flex",
+											"flex",
+											"flex",
+										]}
+									/>
+								}
+								py="0.5rem"
+								px="0.5rem"
+							>
+								Wallet
+							</Button>
+						</Link>
+						<Link href="/services">
+							<Button
+								colorScheme={
+									router.pathname == "/services"
+										? "red"
+										: "teal"
+								}
+								variant="link"
+								fontSize="xl"
+								leftIcon={
+									<Icon
+										as={BsGrid}
+										display={[
+											"none",
+											"none",
+											"flex",
+											"flex",
+											"flex",
+										]}
+									/>
+								}
+								py="0.5rem"
+								px="0.5rem"
+							>
+								Services
+							</Button>
+						</Link>
 					</Flex>
 				</Flex>
 			</Flex>
@@ -151,7 +176,7 @@ export default function Sidebar(props) {
 				display={["none", "none", "flex", "flex", "flex"]}
 			>
 				<Avatar
-					name={props.user.firstName}
+					name={user.firstName}
 					src="https://bit.ly/dan-abramov"
 				></Avatar>
 				<Text
@@ -160,7 +185,7 @@ export default function Sidebar(props) {
 					fontStyle="normal"
 					color={textColor}
 				>
-					{props.user.firstName + " " + props.user.lastName}
+					{user.firstName + " " + user.lastName}
 				</Text>
 			</Flex>
 		</Flex>

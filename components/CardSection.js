@@ -24,7 +24,7 @@ export default function CardSection() {
 		<Flex
 			flexDir="column"
 			align="center"
-			w={["100%", "100%", "35%"]}
+			w={["100%", "100%", "40%"]}
 			minW={[null, null, "300px", "300px", "400px"]}
 			gap="1rem"
 			p="4rem 1rem"
