@@ -22,11 +22,19 @@ import { useEffect } from "react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useAuth } from "../hooks";
 
 export default function Sidebar({ user }) {
 	const bgColor = useColorModeValue("#1f1f1f", "#000");
 	const textColor = useColorModeValue("#fff", "gray.100");
 	const router = useRouter();
+	const { setToken } = useAuth("");
+
+	const logout = async () => {
+		setToken("");
+		localStorage.removeItem("token");
+		localStorage.removeItem("user");
+	};
 	return (
 		<Flex
 			bg={bgColor}
@@ -167,26 +175,27 @@ export default function Sidebar({ user }) {
 					</Flex>
 				</Flex>
 			</Flex>
-
-			<Flex
-				flexDir="row"
-				align="center"
-				my="30"
-				gap={3}
-				display={["none", "none", "flex", "flex", "flex"]}
-			>
-				<Avatar
-					name={user.firstName}
-					src="https://bit.ly/dan-abramov"
-				></Avatar>
-				<Text
+			<Flex flexDir="column" gap="1rem" my="1rem">
+				<Flex
+					flexDir="row"
 					align="center"
-					size="md"
-					fontStyle="normal"
-					color={textColor}
+					gap={3}
+					display={["none", "none", "flex", "flex", "flex"]}
 				>
-					{user.firstName + " " + user.lastName}
-				</Text>
+					<Avatar
+						name={user.firstName}
+						src="https://bit.ly/dan-abramov"
+					></Avatar>
+					<Text
+						align="center"
+						size="md"
+						fontStyle="normal"
+						color={textColor}
+					>
+						{user.firstName + " " + user.lastName}
+					</Text>
+				</Flex>
+				<Button onClick={() => logout()}>Log Out</Button>
 			</Flex>
 		</Flex>
 	);
