@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { useAuth, useBeforeRender } from "../hooks";
 import { useRouter } from "next/router";
+import { Spinner } from "@chakra-ui/react";
 
 export default function ProtectedPage({ children }) {
 	const [email, setEmail] = useState("");
@@ -174,5 +175,12 @@ export default function ProtectedPage({ children }) {
 				)}
 			</>
 		);
-	}
+	} else
+		return (
+			<>
+				<Flex w="100vw" h="100vh" align="center" justify={"center"}>
+					<Spinner size={"xl"} />
+				</Flex>
+			</>
+		);
 }
