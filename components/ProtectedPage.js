@@ -18,8 +18,7 @@ export default function ProtectedPage({ children }) {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const { token, setToken } = useAuth("");
-	const { user, setUser } = useAuth("");
-	const { balance, setBalance } = useAuth("");
+	const { setUser } = useAuth("");
 	const loggedIn = token;
 	const router = useRouter();
 
