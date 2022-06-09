@@ -1,19 +1,16 @@
 import React, { useEffect } from "react";
 import {
-	Box,
 	Button,
-	Center,
 	Flex,
 	FormControl,
 	FormLabel,
 	Heading,
 	Input,
-	Stack,
 	Wrap,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { useAuth, useBeforeRender } from "../hooks";
+import { useState } from "react";
+import { useAuth } from "../hooks";
 import { useRouter } from "next/router";
 import { Spinner } from "@chakra-ui/react";
 

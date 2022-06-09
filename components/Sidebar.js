@@ -1,25 +1,9 @@
 import React from "react";
-import {
-	Avatar,
-	Box,
-	Button,
-	Center,
-	Flex,
-	FormControl,
-	FormLabel,
-	Heading,
-	Input,
-	Stack,
-	Text,
-	Icon,
-	Wrap,
-} from "@chakra-ui/react";
+import { Avatar, Button, Flex, Heading, Text, Icon } from "@chakra-ui/react";
 import { AiOutlineHome, AiOutlinePieChart } from "react-icons/ai";
 import { BiWalletAlt } from "react-icons/bi";
 import { BsGrid } from "react-icons/bs";
-import { getUser } from "./ProtectedPage";
-import { useEffect } from "react";
-import { useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "../hooks";

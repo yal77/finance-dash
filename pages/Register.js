@@ -2,15 +2,12 @@ import React from "react";
 import { useRef } from "react";
 import Router from "next/router";
 import {
-	Box,
 	Button,
-	Center,
 	Flex,
 	FormControl,
 	FormLabel,
 	Heading,
 	Input,
-	Stack,
 	Wrap,
 } from "@chakra-ui/react";
 import Link from "next/link";

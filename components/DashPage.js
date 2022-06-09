@@ -3,8 +3,6 @@ import { Flex, IconButton } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import ProtectedPage from "./ProtectedPage";
 import Sidebar from "./Sidebar";
-import Maindash from "./Maindash";
-import CardSection from "./CardSection";
 import { useAuth } from "../hooks";
 import { useColorMode } from "@chakra-ui/react";
 

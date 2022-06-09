@@ -1,7 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { useAuth } from "../hooks";
-import { Line } from "react-chartjs-2";
 import Chart from "./Chart";
 import { useColorModeValue } from "@chakra-ui/react";
 

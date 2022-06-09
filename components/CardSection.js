@@ -1,7 +1,6 @@
 import { AddIcon, SearchIcon } from "@chakra-ui/icons";
 import {
 	AvatarGroup,
-	Box,
 	Button,
 	Flex,
 	Heading,
