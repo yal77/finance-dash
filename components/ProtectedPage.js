@@ -45,8 +45,10 @@ export default function ProtectedPage({ children }) {
 	};
 
 	useEffect(() => {
-		checkToken();
-	}, []);
+		if (!checked) {
+			checkToken();
+		}
+	});
 
 	const [checked, setChecked] = useState(false);
 
@@ -83,11 +85,28 @@ export default function ProtectedPage({ children }) {
 				) : (
 					<Flex
 						align="center"
-						justify="center"
+						justify="space-between"
 						width="100vw"
 						height="100vh"
 						direction="column"
 					>
+						<Flex
+							p="2rem"
+							borderRadius="0.5rem"
+							bg="gray.800"
+							mt="1rem"
+						>
+							<Heading
+								bgGradient="linear(to-l, #D7EBEB, #F4AFE9)"
+								bgClip="text"
+								fontSize="5xl"
+								userSelect="none"
+								fontWeight="700"
+								//fontFamily="'Nunito', sans-serif"
+							>
+								stonks.io
+							</Heading>
+						</Flex>
 						<Flex
 							width="50%"
 							minW="330px"
@@ -167,6 +186,7 @@ export default function ProtectedPage({ children }) {
 								</FormControl>
 							</form>
 						</Flex>
+						<Flex></Flex>
 					</Flex>
 				)}
 			</>
